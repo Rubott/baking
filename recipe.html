@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leo's Kitchen</title>
   <meta name="description" content="">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,300,700">
+ <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oxygen:400,300,700">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" >-->
-  <link rel="stylesheet" href="css/style.css">
+  
      <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -32,6 +32,8 @@
     border-radius: 1px; /* Rounded corners */
     font-size: 18px; /* Increase font size */
 }
+        
+        
 
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
@@ -44,7 +46,7 @@
     
           <nav>
             <div class="nav-wrapper grey darken-4">
-              <a href="index.html" class="brand-logo center">Logo</a>
+              <a href="index.html" class="brand-logo center"><img src="assets/minilogo.png"></a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
              <ul class="left hide-on-med-and-down">
                 <li><a href="index.html">Home</a></li>
@@ -122,10 +124,33 @@
             <div class="parallax-container">
               <div class="parallax"><img class="responsive-img" src="assets/IMG_1202.jpg"></div>
             </div>
+            <div class="section white">
+              <div class="row container">
+               <video class="responsive-video" controls>
+                   <source src="assets/victoriasponge.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="parallax-container">
+              <div class="parallax"><img class="responsive-img" src="assets/IMG_1204.jpg"></div>
+            </div>
     
 <!--parallax END-->
     
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="material-icons">arrow_upward</i></button>
+    
+   <!-- <canvas id="c"></canvas>-->
+    
+<!--footer START-->
+    <footer class="page-footer grey darken-4">
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Leo Page
+            <a id="download canvas" class="grey-text text-lighten-4 right" href="assets/Victoria%20Sponge%20Cake%20Recipe.pdf" target="_blank">Download Recipe</a>
+            </div>
+          </div>
+        </footer>
+<!--footer END-->    
     
 <!--Javascript START-->
             <script>
@@ -154,6 +179,34 @@ function topFunction() {
     
     <script>
     M.toast({html: 'Scroll to bottom to download this recipe'})
+    </script>
+    
+    <script> 
+        $( document ).ready (function() {
+        var canvas = document.getElementById('c'),
+        cxt = canvas.getContext('2d'),
+        downloadLink = document.getElementById('download-canvas');
+
+        downloadLink.href = canvas.toDataURL();
+        downloadLink.download = "yourimage.JPG"; })();
+    </script>
+    
+    <script>
+    
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+
+  // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
+  // var collapsibleElem = document.querySelector('.collapsible');
+  // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
     </script>
             
 <!--Javascript END-->

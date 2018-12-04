@@ -20,7 +20,7 @@
     
           <nav>
             <div class="nav-wrapper grey darken-4">
-              <a href="index.html" class="brand-logo center">Logo</a>
+              <a href="index.html" class="brand-logo center"><img src="assets/minilogo.png"></a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
              <ul class="left hide-on-med-and-down">
                 <li><a href="index.html">Home</a></li>
@@ -41,15 +41,33 @@
           </ul>
     
         <div class="container center-align">
-                <h2 class="grey-text text-darken-3">Contact</h2><br>
+                <br><h2 class="grey-text text-darken-3">Contact</h2><br>
                 <br>
                 <img src=""><br>
                 <br>
-                <p class="grey-text text-darken-3">[insert text here]</p><br>
+                <h5 class="grey-text text-darken-3">If you wish to speak to me, or if you would like to show your support by sharing my work, you can find me at the social media links below</h5><br>
                 <br>
                 <a href="http://www.twitter.com/" class="waves-effect" target="_blank"><img src="assets/iconfinder_twitter_1860495.png"></a>
                 <a href="https://en-gb.facebook.com/" class="waves-effect" target="_blank"><img src="assets/iconfinder_facebook_1860508.png"></a>
                 <a href="https://www.instagram.com/?hl=en" class="waves-effect" target="_blank"><img src="assets/iconfinder_instagram_1860506.png"></a>
                 <a href="https://www.tumblr.com/"  class="waves-effect"target="_blank"><img src="assets/iconfinder_tumblr_1860496.png"></a>
         </div>
+    
+    <script>
+    
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+
+  // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
+  // var collapsibleElem = document.querySelector('.collapsible');
+  // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+    </script>
 </body>
